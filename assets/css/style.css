@@ -106,7 +106,10 @@ color:#fff;
     #home-sec .overlay {
         padding-top:100px;
         background:rgba(0, 0, 0, 0.80);
-        min-height:790px;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
  #home-sec .main-img {
      
@@ -177,14 +180,110 @@ cursor: pointer;
     /* =============================================================
   ABOUT SECTION STYLES
  ============================================================ */
-    
-   
+
+#about-sec h1 {
+    color: #333;
+}
 #about-sec .social-icon {
     padding:10px 0px 30px 0px;
 }
     #about-sec .social-icon a > img {
-        padding:5px;
+        padding:10px;
+        margin: 5px;
     }
+
+/* =============================================================
+  SKILLS CAROUSEL STYLES
+ ============================================================ */
+#skills-carousel {
+    background: #f8f9fa;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.skills-carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.skills-carousel-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    width: max-content;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    padding: 3px;
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+}
+
+.skill-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 8px;
+    object-fit: contain;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    display: block;
+}
+
+.skill-placeholder {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 3px;
+    text-align: center;
+}
+
+.skill-name {
+    color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.skills-carousel-track:hover {
+    animation-play-state: paused;
+}
+
+/* =============================================================
+  FOOTER STYLES
+ ============================================================ */
+#footer-sec {
+    background: #222;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+#footer-sec p {
+    color: #fff;
+    margin: 0;
+    font-size: 14px;
+}
 
 
 /* =============================================================
@@ -388,8 +487,6 @@ span.round-tabs.five{
     background: transparent;
 }
 
-.tab-content{
-}
 .tab-pane{
    position: relative;
 padding-top: 25px;
@@ -496,6 +593,7 @@ min-height: 400px;
 .portfolio-sec-wrap {
     position: relative;
     cursor: pointer;
+    margin-bottom: 30px;
 }
 
 #portfolio-sec a:hover {
@@ -577,6 +675,36 @@ color:#fff;
     }
 #hire-sec .form-control {
     background-color:transparent;
+}
+
+#hire-sec .row.move-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+#hire-sec #footer-sec:first-child {
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#hire-sec #footer-sec:first-child > div {
+    text-align: center;
+    padding: 20px;
+    margin: 0 !important;
+    float: none !important;
+    display: inline-block !important;
+    width: auto !important;
+    background: transparent !important;
 }
 
 /*=====================================
